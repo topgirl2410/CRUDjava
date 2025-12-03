@@ -90,7 +90,7 @@ public class PantallaHuesped {
 		txtNombre.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				if (txtNombre.getText().length() >= 5) {
+				if (txtNombre.getText().length() >= 30) {
 					e.consume();
 				}
 			}
@@ -107,7 +107,7 @@ public class PantallaHuesped {
 		txtApellidos.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				if (txtApellidos.getText().length() >= 5) {
+				if (txtApellidos.getText().length() >= 30) {
 					e.consume();
 				}
 			}
@@ -124,7 +124,7 @@ public class PantallaHuesped {
 		txtDireccion.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				if (txtDireccion.getText().length() >= 5) {
+				if (txtDireccion.getText().length() >= 125) {
 					e.consume();
 				}
 			}
@@ -141,7 +141,7 @@ public class PantallaHuesped {
 		txtCiudad.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				if (txtCiudad.getText().length() >= 5) {
+				if (txtCiudad.getText().length() >= 125) {
 					e.consume();
 				}
 			}
@@ -158,7 +158,7 @@ public class PantallaHuesped {
 		txtNumTarjeta.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				if (txtNumTarjeta.getText().length() >= 5) {
+				if (txtNumTarjeta.getText().length() >= 30) {
 					e.consume();
 				}
 			}
@@ -175,7 +175,7 @@ public class PantallaHuesped {
 		txtNumHabitacion.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
-				if (txtNumHabitacion.getText().length() >= 5) {
+				if (txtNumHabitacion.getText().length() >= 3) {
 					e.consume();
 				}
 			}
