@@ -9,21 +9,27 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JSpinner;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class PantallaHuesped {
 
 	private JFrame frame;
-	private JTextField textCodigo;
-	private JTextField textNombre;
-	private JTextField textApellidos;
-	private JTextField textDireccion;
-	private JTextField textCiudad;
-	private JTextField textNumTarjeta;
-	private JTextField textNumHabitacion;
+	private JTextField txtCodigoHuesped;
+	private JTextField txtNombre;
+	private JTextField txtApellidos;
+	private JTextField txtDireccion;
+	private JTextField txtCiudad;
+	private JTextField txtNumTarjeta;
+	private JTextField txtNumHabitacion;
 	/**
 	 * @wbp.nonvisual location=35,616
 	 */
 	private final JSpinner spinner = new JSpinner();
+	private JButton btnNewButton;
+	private JButton btnNewButton_1;
+	private JButton btnNewButton_1_1;
+	private JButton btnNewButton_1_2;
 
 	/**
 	 * Launch the application.
@@ -53,91 +59,147 @@ public class PantallaHuesped {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setName("CRUD HUESPED");
+		frame.setTitle("CRUD HUESPED");
 		frame.setBounds(100, 100, 450, 300);
 		frame.setSize(600, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 		JLabel lblCodigo = new JLabel("Codigo");
 		lblCodigo.setBounds(110, 44, 121, 17);
 		frame.getContentPane().add(lblCodigo);
-		
-		textCodigo = new JTextField();
-		textCodigo.setBounds(249, 42, 114, 21);
-		frame.getContentPane().add(textCodigo);
-		textCodigo.setColumns(10);
-		
+
+		txtCodigoHuesped = new JTextField();
+		txtCodigoHuesped.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				if (txtCodigoHuesped.getText().length() >= 5) {
+					e.consume();
+				}
+			}
+		});
+		txtCodigoHuesped.setBounds(249, 42, 114, 21);
+		frame.getContentPane().add(txtCodigoHuesped);
+		txtCodigoHuesped.setColumns(10);
+
 		JLabel lblNombre = new JLabel("Nombre");
 		lblNombre.setBounds(110, 90, 102, 17);
 		frame.getContentPane().add(lblNombre);
-		
-		textNombre = new JTextField();
-		textNombre.setColumns(10);
-		textNombre.setBounds(249, 88, 114, 21);
-		frame.getContentPane().add(textNombre);
-		
+
+		txtNombre = new JTextField();
+		txtNombre.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				if (txtNombre.getText().length() >= 5) {
+					e.consume();
+				}
+			}
+		});
+		txtNombre.setColumns(10);
+		txtNombre.setBounds(249, 88, 114, 21);
+		frame.getContentPane().add(txtNombre);
+
 		JLabel lblApellidos = new JLabel("Apellidos");
 		lblApellidos.setBounds(110, 131, 102, 17);
 		frame.getContentPane().add(lblApellidos);
-		
-		textApellidos = new JTextField();
-		textApellidos.setColumns(10);
-		textApellidos.setBounds(249, 129, 114, 21);
-		frame.getContentPane().add(textApellidos);
-		
+
+		txtApellidos = new JTextField();
+		txtApellidos.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				if (txtApellidos.getText().length() >= 5) {
+					e.consume();
+				}
+			}
+		});
+		txtApellidos.setColumns(10);
+		txtApellidos.setBounds(249, 129, 114, 21);
+		frame.getContentPane().add(txtApellidos);
+
 		JLabel lblDireccion = new JLabel("Direccion");
 		lblDireccion.setBounds(110, 175, 102, 17);
 		frame.getContentPane().add(lblDireccion);
-		
-		textDireccion = new JTextField();
-		textDireccion.setColumns(10);
-		textDireccion.setBounds(249, 173, 114, 21);
-		frame.getContentPane().add(textDireccion);
-		
+
+		txtDireccion = new JTextField();
+		txtDireccion.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				if (txtDireccion.getText().length() >= 5) {
+					e.consume();
+				}
+			}
+		});
+		txtDireccion.setColumns(10);
+		txtDireccion.setBounds(249, 173, 114, 21);
+		frame.getContentPane().add(txtDireccion);
+
 		JLabel lblCiudad = new JLabel("Ciudad");
 		lblCiudad.setBounds(110, 218, 102, 17);
 		frame.getContentPane().add(lblCiudad);
-		
-		textCiudad = new JTextField();
-		textCiudad.setColumns(10);
-		textCiudad.setBounds(249, 216, 114, 21);
-		frame.getContentPane().add(textCiudad);
-		
+
+		txtCiudad = new JTextField();
+		txtCiudad.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				if (txtCiudad.getText().length() >= 5) {
+					e.consume();
+				}
+			}
+		});
+		txtCiudad.setColumns(10);
+		txtCiudad.setBounds(249, 216, 114, 21);
+		frame.getContentPane().add(txtCiudad);
+
 		JLabel lblNumTarjeta = new JLabel("Numero Tarjeta");
 		lblNumTarjeta.setBounds(110, 264, 102, 17);
 		frame.getContentPane().add(lblNumTarjeta);
-		
-		textNumTarjeta = new JTextField();
-		textNumTarjeta.setColumns(10);
-		textNumTarjeta.setBounds(249, 262, 114, 21);
-		frame.getContentPane().add(textNumTarjeta);
-		
+
+		txtNumTarjeta = new JTextField();
+		txtNumTarjeta.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				if (txtNumTarjeta.getText().length() >= 5) {
+					e.consume();
+				}
+			}
+		});
+		txtNumTarjeta.setColumns(10);
+		txtNumTarjeta.setBounds(249, 262, 114, 21);
+		frame.getContentPane().add(txtNumTarjeta);
+
 		JLabel lblNumHabitacion = new JLabel("Numero Habitacion");
 		lblNumHabitacion.setBounds(110, 307, 102, 17);
 		frame.getContentPane().add(lblNumHabitacion);
-		
-		textNumHabitacion = new JTextField();
-		textNumHabitacion.setColumns(10);
-		textNumHabitacion.setBounds(249, 305, 114, 21);
-		frame.getContentPane().add(textNumHabitacion);
-		
-		JButton btnNewButton = new JButton("Guardar");
+
+		txtNumHabitacion = new JTextField();
+		txtNumHabitacion.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				if (txtNumHabitacion.getText().length() >= 5) {
+					e.consume();
+				}
+			}
+		});
+		txtNumHabitacion.setColumns(10);
+		txtNumHabitacion.setBounds(249, 305, 114, 21);
+		frame.getContentPane().add(txtNumHabitacion);
+
+		btnNewButton = new JButton("Insertar");
 		btnNewButton.setBounds(22, 467, 105, 27);
 		frame.getContentPane().add(btnNewButton);
-		
-		JButton btnNewButton_1 = new JButton("Actualizar");
+
+		btnNewButton_1 = new JButton("Cargar");
 		btnNewButton_1.setBounds(154, 467, 105, 27);
 		frame.getContentPane().add(btnNewButton_1);
-		
-		JButton btnNewButton_1_1 = new JButton("Eliminar");
+
+		btnNewButton_1_1 = new JButton("Eliminar");
 		btnNewButton_1_1.setBounds(295, 467, 105, 27);
 		frame.getContentPane().add(btnNewButton_1_1);
-		
-		JButton btnNewButton_1_2 = new JButton("Limpiar");
+
+		btnNewButton_1_2 = new JButton("Actualizar");
 		btnNewButton_1_2.setBounds(432, 467, 105, 27);
 		frame.getContentPane().add(btnNewButton_1_2);
-		
+
 		JList list = new JList();
 		list.setBounds(169, 405, 1, 1);
 		frame.getContentPane().add(list);
